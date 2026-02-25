@@ -1,86 +1,94 @@
-Iris Dataset – Data Cleaning & Exploratory Data Analysis
+Data Cleaning and Exploratory Data Analysis
 
-Author
-
-Richmond Osei
+Author: Richmond Osei
 
 Project Overview
 
-This project focuses on performing data cleaning and exploratory data analysis on the Iris dataset using R.
+This project presents a structured exploratory analysis of the Iris dataset using R.
 
-The objective was to:
+The objective was not merely to compute summary statistics, but to:
 
-Identify data quality issues
+Validate data integrity
 
-Compute summary statistics
+Examine distributional properties
 
-Visualize data distributions
+Identify variability across features
 
-Analyze relationships between numerical variables
+Quantify inter variable relationships
 
- Data Cleaning Steps
+Determine which variables carry the strongest discriminatory power
 
-Loaded dataset using read.csv()
+The analysis provides foundational insights necessary for downstream modeling and classification tasks.
 
-Checked structure using str() and head()
+Data Integrity Assessment
 
-Verified missing values (none found)
+A systematic quality audit was conducted before analysis:
 
-Removed duplicate rows (none found)
+Verified dataset structure and variable types
 
-Converted species column to categorical factor
+Confirmed absence of missing values
 
-The dataset required minimal preprocessing and was clean.
+Checked for duplicate observations
 
-Summary Statistics
-Feature	Mean	Standard Deviation
-Sepal Length	5.856	0.829
-Sepal Width	3.056	0.437
-Petal Length	3.780	1.759
-Petal Width	1.209	0.758
+Converted species variable to categorical factor
 
-Petal length showed the highest variability.
+The dataset was fully clean and required no corrective preprocessing, enabling reliable statistical inference.
 
-Visualizations Created
+Descriptive Statistical Analysis
 
-Histogram of Sepal Length
+Key distributional measures were computed for all numerical variables.
 
-Boxplot of Sepal Length
+Feature	          Mean	         Standard Deviation
+Sepal Length	     5.856	              0.829
+Sepal Width	      3.056               0.437
+Petal Length	     3.780              	1.759
+Petal Width	      1.209              	0.758
+Key Insight
 
-Scatter Plot of Sepal Length vs Petal Length
+Petal length exhibits the highest variability, suggesting stronger discriminatory potential across species. This indicates that petal based features may carry greater classification power compared to sepal based measurements.
 
-The scatter plot revealed a strong positive relationship between sepal length and petal length.
+Distributional Analysis
 
- Correlation Analysis
+Multiple visualization techniques were applied to assess feature behavior:
 
-Strong positive correlations were found between:
+Histograms to inspect distribution shapes
 
-Petal Length and Petal Width (0.96)
+Boxplots to evaluate spread and outliers
 
-Sepal Length and Petal Length (0.87)
+Scatter plots to explore bivariate relationships
 
-Weak negative correlation:
+The scatter plot of sepal length versus petal length revealed a clear positive linear pattern, suggesting strong association between structural plant measurements.
 
-Sepal Width and Petal Length (-0.42)
+Correlation Structure
 
-This suggests petal features are strong distinguishing variables.
+Correlation analysis revealed meaningful interdependencies:
 
-Tools Used
+Strong Positive Relationships:
 
-R
+Petal Length and Petal Width: 0.96
 
-Base R Visualization
+Sepal Length and Petal Length: 0.87
 
-Statistical Summary Functions
+Moderate Negative Relationship:
 
- Skills Demonstrated
+Sepal Width and Petal Length: -0.42
 
-Data Cleaning
+Interpretation
 
-Exploratory Data Analysis
+Petal dimensions are highly correlated and therefore likely represent the dominant variance component within the dataset.
 
-Correlation Analysis
+This reinforces the statistical understanding that petal measurements are the primary drivers of species differentiation in the Iris dataset.
 
-Data Visualization
+Analytical Impact
 
-Statistical Interpretation
+This analysis achieved:
+
+Validation of dataset reliability
+
+Identification of high variance features
+
+Detection of strong multicollinearity among petal variables
+
+Clear evidence that petal measurements provide superior discriminatory power
+
+The findings establish a statistically informed foundation for supervised learning tasks such as logistic regression, decision trees, or discriminant analysis.
